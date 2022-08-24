@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">NotiKeep</string>
+
+    <!--    Check Access-->
+    <string name="toast_text_access_error">Please check the box next to NotiKeep for using app</string>
+
+    <!--    BottomNav-->
+    <string name="bottom_nav_notifications_item_title">Notifications</string>
+    <string name="bottom_nav_favourites_item_title">Favourites</string>
+    <string name="bottom_nav_settings_item_title">Settings</string>
+
+    <!--    SnackBar No Notification Access-->
+    <string name="error_no_notification_access_desc">No access to notifications</string>
+    <string name="snackbar_no_notification_access_action_label">Give access</string>
+
+    <!--    Biometric-->
+    <string name="biometric_auth_title">Authorize to continue using the application</string>
+
+    <!--    Settings-->
+    <string name="settings_privacy_title">Privacy</string>
+    <string name="settings_data_title">Data</string>
+    <string name="settings_button_undo_deleting_text">Undo deleting notifications</string>
+    <string name="settings_button_delete_text">Delete all notifications</string>
+    <string name="snack_bar_success_message">Success</string>
+
+    <!--    Applications-->
+    <string name="snack_bar_undo_deleting_message">Undo deleting?</string>
+    <string name="snack_bar_undo_deleting_action_label">Undo</string>
+
+    <!--    Key-->
+    <string name="key_save_button_text">Save key</string>
+</resources>
