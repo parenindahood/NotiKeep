@@ -1,15 +1,15 @@
 [versions]
-accompanist = "0.23.1"
+accompanist = "0.25.1"
 # @pin this version to update AGP manually
 androidGradlePlugin = "7.2.2"
 androidxCore = "1.8.0"
 appCompat = "1.5.0"
+catalogUpdate = "0.6.0"
 compose = "1.2.1"
 composeActivity = "1.5.1"
 # @keep this version because it is used in the build-script files
 composeCompiler = "1.3.0"
 coroutines = "1.6.4"
-dependencyUpdate = "0.5.3"
 koin = "3.2.0"
 # @pin this version to update Kotlin manually
 kotlin = "1.7.10"
@@ -17,7 +17,7 @@ kotlin = "1.7.10"
 ksp = "1.7.10-1.0.6"
 lifecycle = "2.5.1"
 material = "1.6.1"
-navigation = "2.4.1"
+navigation = "2.5.1"
 room = "2.4.3"
 versions = "0.42.0"
 work = "2.7.1"
@@ -65,6 +65,6 @@ room = [
 ]
 
 [plugins]
-dependencyUpdates = { id = "nl.littlerobots.version-catalog-update", version.ref = "dependencyUpdate" }
+catalogUpdate = { id = "nl.littlerobots.version-catalog-update", version.ref = "catalogUpdate" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-versionsPlugin = { id = "com.github.ben-manes.versions", version.ref = "versions" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "versions" }
