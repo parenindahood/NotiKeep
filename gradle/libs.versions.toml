@@ -2,6 +2,8 @@
 kotlin = "1.7.10"
 androidGradlePlugin = "7.2.2"
 ksp = "1.7.10-1.0.6"
+versions = "0.42.0"
+dependencyUpdate = "0.5.3"
 
 coroutines = "1.6.4"
 
@@ -70,4 +72,6 @@ compose = ["compose-activity", "compose-material", "compose-preview", "compose-u
 
 [plugins]
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+versionsPlugin = { id = "com.github.ben-manes.versions", version.ref = "versions" }
+dependencyUpdates = { id = "nl.littlerobots.version-catalog-update", version.ref = "dependencyUpdate" }
 
