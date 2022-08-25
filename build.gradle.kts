@@ -1,3 +1,8 @@
+plugins {
+    alias(libs.plugins.versionsPlugin)
+    alias(libs.plugins.dependencyUpdates)
+}
+
 buildscript {
     repositories {
         google()
