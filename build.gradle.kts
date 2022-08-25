@@ -18,7 +18,7 @@ buildscript {
 }
 
 tasks.withType<DependencyUpdatesTask> {
-    rejectVersionIf { UnstableVersionsFilter.rejectVersion(currentVersion, candidate.version) }
+    rejectVersionIf { UnstableVersionsFilter(currentVersion, candidate.version) }
 }
 
 tasks.register(name = "type", type = Delete::class) {

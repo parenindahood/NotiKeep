@@ -9,7 +9,7 @@ object UnstableVersionsFilter {
     // order is important!
     private val unstablePostfixes = listOf("preview", "alpha", "beta", "m", "cr", "rc")
 
-    fun rejectVersion(current: String, new: String): Boolean =
+    operator fun invoke(current: String, new: String): Boolean =
         stabilityLevel(current) > stabilityLevel(new)
 
     private fun stabilityLevel(version: String): Int {
