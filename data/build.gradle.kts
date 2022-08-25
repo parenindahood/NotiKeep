@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    id("com.google.devtools.ksp") version "1.7.10-1.0.6"
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -36,14 +36,11 @@ android {
 dependencies {
     implementation(project(":core"))
 
-    implementation("androidx.core:core-ktx:1.8.0")
+    implementation(libs.androidx.core)
+    implementation(libs.coroutines.android)
 
-    implementation("io.insert-koin:koin-core:3.2.0")
-    implementation("io.insert-koin:koin-android:3.2.0")
+    implementation(libs.bundles.koin)
 
-    implementation("androidx.room:room-runtime:2.4.3")
-    implementation("androidx.room:room-ktx:2.4.3")
-    ksp("androidx.room:room-compiler:2.4.3")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation(libs.bundles.room)
+    ksp(libs.room.compiler)
 }

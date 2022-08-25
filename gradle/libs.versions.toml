@@ -1,0 +1,73 @@
+[versions]
+kotlin = "1.7.10"
+androidGradlePlugin = "7.2.2"
+ksp = "1.7.10-1.0.6"
+
+coroutines = "1.6.4"
+
+androidxCore = "1.8.0"
+lifecycle = "2.5.1"
+appCompat = "1.5.0"
+material = "1.6.1"
+
+work = "2.7.1"
+room = "2.4.3"
+navigation = "2.4.1"
+koin = "3.2.0"
+
+compose = "1.2.1"
+composeCompiler = "1.3.0"
+composeActivity = "1.5.1"
+accompanist = "0.23.1"
+
+[libraries]
+# Gralde
+gradle-plugin-kotlin-android = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-plugin-android = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+
+# AndroidX
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-work = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
+
+# Material
+material = { module = "com.google.android.material:material", version.ref = "material" }
+
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# Generic
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Compose
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
+compose-animation-graphics = { module = "androidx.compose.animation:animation-graphics", version.ref = "compose" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+
+# Accompanist
+accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
+
+# Navigation
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+
+# Koin
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-work = { module = "io.insert-koin:koin-androidx-workmanager", version.ref = "koin" }
+
+[bundles]
+koin = ["koin-android", "koin-core"]
+room = ["room-runtime", "room-ktx"]
+compose = ["compose-activity", "compose-material", "compose-preview", "compose-ui"]
+
+[plugins]
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+

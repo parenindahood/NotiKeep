@@ -41,7 +41,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
     packagingOptions {
         resources {
@@ -55,30 +55,24 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":data"))
 
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.5.0")
-    implementation("com.google.android.material:material:1.6.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    implementation(libs.androidx.core)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.material)
+    implementation(libs.coroutines.android)
 
-    implementation("androidx.activity:activity-compose:1.5.1")
-    implementation("androidx.compose.ui:ui:1.2.1")
-    implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
-    implementation("androidx.compose.animation:animation-graphics:1.2.1")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.2.1")
+    implementation(libs.bundles.compose)
+    implementation(libs.compose.animation.graphics)
+    debugImplementation(libs.compose.ui.tooling)
 
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.23.1")
-    implementation("com.google.accompanist:accompanist-drawablepainter:0.23.1")
+    implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.accompanist.drawablepainter)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation(libs.navigation.compose)
 
-    implementation("androidx.navigation:navigation-compose:2.5.1")
+    implementation(libs.bundles.koin)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.work)
 
-    implementation("io.insert-koin:koin-core:3.2.0")
-    implementation("io.insert-koin:koin-android:3.2.0")
-    implementation("io.insert-koin:koin-androidx-compose:3.2.0")
-    implementation("io.insert-koin:koin-androidx-workmanager:3.2.0")
-
-    implementation("androidx.work:work-runtime-ktx:2.7.1")
+    implementation(libs.androidx.work)
 }
